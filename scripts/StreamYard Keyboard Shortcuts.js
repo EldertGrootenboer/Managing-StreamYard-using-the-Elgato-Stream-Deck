@@ -23,8 +23,8 @@
                 muteButton.click();
             }
         } else if (e.key == "v" && !e.shiftKey && e.ctrlKey && e.altKey && !e.metaKey) {
-            var faceUnmuteButton = document.querySelector('[aria-label="turn on camera"]');
-            var faceMuteButton = document.querySelector('[aria-label="turn off camera"]');
+            var faceUnmuteButton = document.querySelector('[aria-label="Turn on camera"]');
+            var faceMuteButton = document.querySelector('[aria-label="Turn off camera"]');
 
             if (faceUnmuteButton !== null) {
                 faceUnmuteButton.click();
