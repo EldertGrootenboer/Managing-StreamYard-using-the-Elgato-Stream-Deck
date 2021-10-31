@@ -68,6 +68,12 @@
                 largeScreenLayoutButton.click();
             }
         } else if (e.key == "7" && !e.shiftKey && !e.ctrlKey && e.altKey && !e.metaKey) {
+            var pictureInPictureLayoutButton = document.querySelector('[aria-label="Picture in picture layout. Screen is large with cameras on top. If no screen, it behaves like the group layout."]');
+
+            if (pictureInPictureLayoutButton !== null) {
+                pictureInPictureLayoutButton.click();
+            }
+        } else if (e.key == "8" && !e.shiftKey && !e.ctrlKey && e.altKey && !e.metaKey) {
             var fullScreenLayoutButton = document.querySelector('[aria-label="Full screen layout. Only the shared screen is visible. If no screen, it behaves like the group layout."]');
 
             if (fullScreenLayoutButton !== null) {
