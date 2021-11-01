@@ -101,3 +101,14 @@ IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
     WinActivate ahk_id %winid% ; Restore previous window focus
 }
 return
+
+; StreamYard - Set scene 8
++^!8::
+WinGet, winid, ID, A	; Save the current window ID
+IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
+{
+    WinActivate
+    Send, !8   
+    WinActivate ahk_id %winid% ; Restore previous window focus
+}
+return
