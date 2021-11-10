@@ -3,13 +3,39 @@
 ;control: ^
 ;alt: !
 
+; StreamYard - Go Live
++^!Z::
+WinGet, winid, ID, A	; Save the current window ID
+IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
+{
+    WinActivate
+    Send, +z
+    Sleep, 500
+    Send, +z
+    WinActivate ahk_id %winid% ; Restore previous window focus
+}
+return
+
+; StreamYard - End Broadcast
++^!X::
+WinGet, winid, ID, A	; Save the current window ID
+IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
+{
+    WinActivate
+    Send, +x
+    Sleep, 500
+    Send, +x
+    WinActivate ahk_id %winid% ; Restore previous window focus
+}
+return
+
 ; StreamYard - Toggle Mute
 +^!B::
 WinGet, winid, ID, A	; Save the current window ID
 IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
 {
     WinActivate
-    Send, ^!b   
+    Send, ^d
     WinActivate ahk_id %winid% ; Restore previous window focus
 }
 return
@@ -20,7 +46,7 @@ WinGet, winid, ID, A	; Save the current window ID
 IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
 {
     WinActivate
-    Send, ^!v   
+    Send, ^e
     WinActivate ahk_id %winid% ; Restore previous window focus
 }
 return
@@ -31,7 +57,7 @@ WinGet, winid, ID, A	; Save the current window ID
 IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
 {
     WinActivate
-    Send, !1   
+    Send, +1
     WinActivate ahk_id %winid% ; Restore previous window focus
 }
 return
@@ -42,7 +68,7 @@ WinGet, winid, ID, A	; Save the current window ID
 IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
 {
     WinActivate
-    Send, !2   
+    Send, +2
     WinActivate ahk_id %winid% ; Restore previous window focus
 }
 return
@@ -53,7 +79,7 @@ WinGet, winid, ID, A	; Save the current window ID
 IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
 {
     WinActivate
-    Send, !3   
+    Send, +3
     WinActivate ahk_id %winid% ; Restore previous window focus
 }
 return
@@ -64,7 +90,7 @@ WinGet, winid, ID, A	; Save the current window ID
 IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
 {
     WinActivate
-    Send, !4   
+    Send, +4
     WinActivate ahk_id %winid% ; Restore previous window focus
 }
 return
@@ -75,7 +101,7 @@ WinGet, winid, ID, A	; Save the current window ID
 IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
 {
     WinActivate
-    Send, !5   
+    Send, +5
     WinActivate ahk_id %winid% ; Restore previous window focus
 }
 return
@@ -86,7 +112,7 @@ WinGet, winid, ID, A	; Save the current window ID
 IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
 {
     WinActivate
-    Send, !6   
+    Send, +6
     WinActivate ahk_id %winid% ; Restore previous window focus
 }
 return
@@ -97,7 +123,7 @@ WinGet, winid, ID, A	; Save the current window ID
 IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
 {
     WinActivate
-    Send, !7   
+    Send, +7
     WinActivate ahk_id %winid% ; Restore previous window focus
 }
 return
@@ -108,7 +134,7 @@ WinGet, winid, ID, A	; Save the current window ID
 IfWinExist, StreamYard ahk_class Chrome_WidgetWin_1
 {
     WinActivate
-    Send, !8   
+    Send, +8
     WinActivate ahk_id %winid% ; Restore previous window focus
 }
 return
